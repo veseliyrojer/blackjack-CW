@@ -1,0 +1,50 @@
+.greeting-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting-screen {
+    text-align: center;
+
+}
+
+.logo {
+    margin-bottom: 50px;
+    width: 80px;
+}
+
+.greeting-msg {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.5;
+    color: var(--heading-color);
+
+
+}
+
+.start-guide {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 3;
+    color: var(--text-color);
+    text-decoration: underline;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.start-btn {
+    font-size: 2rem;
+    background-color: #34547A;
+    color: var(--heading-color);
+    padding: 25px 41px;
+    border: 1px solid #ff3939;
+    border-radius: 10px;
+    margin-top: 2.5rem;
+}
+
+.start-btn:hover {
+    background-color: #6a88ad;
+    border: 1px solid #000;
+}

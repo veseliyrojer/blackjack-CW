@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>BlackJack</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/game.png">
+</head>
+
+<body>
+
+    <div class="greeting-container" id="greeting">
+
+        <div class="greeting-screen ">
+            <img src="./assets/img/icon.png" alt="" class="logo">
+            <h1 class="greeting-msg">Hello , Player! </h1>
+            <h1 class="greeting-msg">Wellcome to BlackJack!</h1>
+            <h2 class="start-guide">Press the 'Start Game' button to start the game !</p>
+                <button id="greeting_start_btn" class="start-btn" onclick="">Start Game</button>
+
+        </div>
+    </div>
+
+    <div class="game-container" id="game">
+        <div class="game-screen">
+            <div class="dealer">
+                <span class="dealer-label">Dealer's Hand:</span>
+                <span id="dealer_value" class="dealer-value"></span>
+            </div>
+
+            <div id="dealer_table" class="dealer-table"></div>
+
+            <div class="player">
+                <span class="player-label">Player Hand:</span>
+                <span id="player_value" class="player-value"></span>
+            </div>
+
+            <div id="player_table" class="player-table"></div>
+
+            <div class="score">
+                <div class="player-score">
+                    <span class="personal-score">Player score: </span>
+                    <span id="player_score" class="personal-score">0</span>
+                </div>
+                <div class="dealer-score">
+                    <span class="personal-score">Dealer score:</span>
+                    <span id="dealer_score" class="personal-score">0</span>
+                </div>
+            </div>
+
+            <div class="btn-board">
+                <div class="info">
+                    <p id="current_info" class="current-info">Good Luck!</p>
+                    <p id="deal_again" class="current-info smaller">Deal Again</p>
+                </div>
+                <div id="playing_btn" class="playing-btn">
+                    <button id="hit_btn" class="hit-btn" type="button" onclick="">Hit</button>
+                    <button id="stand_btn" class="stand-btn" type="button" onclick="">Stand</button>
+                </div>
+                <div class="dealing-btn">
+                    <button id="deal_btn" class="deal-btn" type="button" onclick="">Deal</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
