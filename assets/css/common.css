@@ -1,4 +1,4 @@
- :root {                          /* default styles for html page */
+ :root {                          /* default styles */
     --heading-color: #dccb14;
     --text-color: #fff;
     font-family: 'Arvo', serif;
@@ -6,9 +6,4 @@
     background-color: #007d06;
     letter-spacing: 0.3rem;
 
-}
-
-
-.centered-text {
-    text-align: center;
 }
