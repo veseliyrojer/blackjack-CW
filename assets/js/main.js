@@ -81,7 +81,9 @@ function getFirstCards() {
         $('#dealer_table').append(`<img id="dealer_cards" class="dealer-cards" src="./assets/img/cards/${dealerCards[i]}.png" alt="">`) //print card
         $('#dealer_table').append(`<img id="dealer_cards" class="dealer-cards back" src="./assets/img/cards/BACK.png" alt="">`)
     }
+  
     getDealerValue()
+    
 }
 
 // push one more card if the function was called (arr) - argument to show which player to add a card
@@ -208,28 +210,29 @@ const checkStart = {
         if (playerValue === 21) {
             $('#current_info').html(`!BlackJack! Player WIN !`)
             $('#player_score').html(++playerScore)
-            info()
+            $('.player').addClass('greenLabel') 
+            $('.dealer').addClass('redLabel')
+            actionBtn()
         }
         if (dealerValue === 21) {
             $('#current_info').html(`s BlackJack! Dealer WIN !`)
             $('#dealer_score').html(++dealerScore)
-            info()
+            $('.dealer').addClass('greenLabel') 
+            $('.player').addClass('redLabel')
+            actionBtn()
         }
     }
 
 }
+// hide hit and stand button and show deal button when game end 
+function actionBtn() {
+    $('#hit_btn').hide()
+    $('#stand_btn').hide()
+    $('#deal_btn').show()
 
+}
 // check the condition to stop current game and print who is winner and count score
 function endGame() {
-    function info() {
-        $('#hit_btn').hide()
-        $('#stand_btn').hide()
-        $('#deal_btn').show()
-
-    }
-
-    // make green label to show who won
-    // make red label to show who lost
 
     if (playerValue === 21 && dealerValue < 21) {
         $('.player').addClass('greenLabel') 
@@ -237,32 +240,34 @@ function endGame() {
         $('#current_info').html(`!BlackJack! Player WIN!`)
         $('#player_score').html(++playerScore)
         $('#deal_again').show()
-        info()
+        actionBtn()
     } else if (dealerValue === 21) {
         $('.dealer').addClass('greenLabel')
         $('.player').addClass('redLabel')
         $('#current_info').html(`!BlackJack! Dealer WIN!`)
         $('#dealer_score').html(++dealerScore)
         $('#deal_again').show()
-        info()
+        actionBtn()
     } else if (dealerValue > 21 || playerValue > dealerValue && playerValue < 21) {
         $('.player').addClass('greenLabel')
         $('.dealer').addClass('redLabel')
         $('#current_info').html(`Player WIN!`)
         $('#player_score').html(++playerScore)
         $('#deal_again').show()
-        info()
+        actionBtn()
     } else if (playerValue < 21 && playerValue < dealerValue && dealerValue <= 21 || playerValue > 21) {
         $('.dealer').addClass('greenLabel')
         $('.player').addClass('redLabel')
         $('#current_info').html(`Dealer WIN!`)
         $('#dealer_score').html(++dealerScore)
         $('#deal_again').show()
-        info()
+        actionBtn()
     } else if (playerValue === dealerValue) {
         $('#current_info').html(`Draw`)
         $('#deal_again').show()
-        info()
+        actionBtn()
     }
 
 }
+
+// If you have some questions about code just ask me by email 'veseliyrojer64@gmail.com' 
